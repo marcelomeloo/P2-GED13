@@ -1,5 +1,5 @@
 ## Aluno: Marcelo Melo de Oliveira 
-Link do Repositório no Github: https://github.com/marcelomeloo/P1-GED13/tree/master
+Link do Repositório no Github: https://github.com/marcelomeloo/P2-GED13
 
 ```{R child='./q1.rmd'}
 ```

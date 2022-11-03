@@ -28,7 +28,7 @@ Utilizando o comando fitdist para o primeiro conjunto de dados, temos:
   fit.gamma_1
   plot(fit.gamma_1)
 ```
-Eh provavel que o primeiro conjunto de dados seja melhor descrito pela distribuicao gama, uma vez que eh a distribuicao que apresenta menor erro relativo para o ajuste e possui melhor alinhamento as retas dos graficos
+É provável que o primeiro conjunto de dados seja melhor descrito pela distribuição gama, uma vez que é a distribuição que apresenta menor erro relativo para o ajuste e possui melhor alinhamento às retas dos gráficos
 \newline
 \newline
 Agora, utilizando o comando fitdist para o segundo conjunto de dados, temos:
@@ -41,7 +41,7 @@ Agora, utilizando o comando fitdist para o segundo conjunto de dados, temos:
   fit.expo_2
   plot(fit.expo_2)
 ```
-Eh provavel que o segundo conjunto de dados seja melhor descrito pela distribuicao exponencial, uma vez que eh a distribuicao possui melhor alinhamento as retas dos graficos
+É provavel que o segundo conjunto de dados seja melhor descrito pela distribuição exponencial, uma vez que é a distribuição possui melhor alinhamento ás retas dos gráficos
 \newline
 \newline
 **d)**
@@ -50,12 +50,12 @@ Para os dados 1:
 ```{r descdist dos Dados 1, results="hide"}
   descdist(dados_1, discrete = FALSE)
 ```
-De acordo com grafico, eh possivel perceber que a amostra de dados se aproxima mais de uma distribuicao gama, ja que o ponto azul se aproxima mais da reta tracejada.
+De acordo com gráfico, é possível perceber que a amostra de dados se aproxima mais de uma distribuição gama, já que o ponto azul se aproxima mais da reta tracejada.
 Agora, para os dados 2:
 ```{r descdist dos Dados 2, results="hide"}
   descdist(dados_2, discrete = FALSE)
 ```
-De acordo com grafico, eh possivel perceber que a amostra de dados se aproxima mais de uma distribuicao exponencial, ja que o ponto azul se aproxima mais do ponto marcado como exponencial.
+De acordo com gráfico, é possível perceber que a amostra de dados se aproxima mais de uma distribuição exponencial, já que o ponto azul se aproxima mais do ponto marcado como exponencial.
 \newline
 \newline
 **e)**
@@ -68,7 +68,7 @@ Para os dados 1:
   fit.normal_1$aic
   fit.expo_1$aic
 ```
-Como o AIC do fit da gama eh o menor, percebe-se que, de fato, o ajuste para a distruibuicao gama eh o melhor dentre os demais para o primeiro conjunto de dados.
+Como o AIC do fit da gama é o menor, percebe-se que, de fato, o ajuste para a distribuição gama é o melhor dentre os demais para o primeiro conjunto de dados.
 \newline
 \newline
 Agora, para os dados 2:
@@ -79,7 +79,7 @@ Agora, para os dados 2:
   fit.normal_2$aic
   fit.expo_2$aic
 ```
-Como o AIC do fit da exponencial eh o menor, percebe-se que, de fato, o ajuste para a distruibuicao exponencial eh o melhor dentre os demais para o segundo conjunto de dados.
+Como o AIC do fit da exponencial é o menor, percebe-se que, de fato, o ajuste para a distribuição exponencial é o melhor dentre os demais para o segundo conjunto de dados.
 \newline
 \newline
 **f)**
@@ -90,4 +90,4 @@ Como o AIC do fit da exponencial eh o menor, percebe-se que, de fato, o ajuste p
 ```{r}
   ks.test(dados_2, "pexp", 3.291175, exact=FALSE)
 ```
-Como os p-valores sao 0.796 e 0.9789 para, respectivamente, os testes da gamma e da exponencial, podemos concluir que os ajustes sao adequados, uma vez que os p-valores sao superiores a 5%.
+Como os p-valores sao 0.796 e 0.9789 para, respectivamente, os testes da gama e da exponencial, podemos concluir que os ajustes são adequados, uma vez que os p-valores são superiores a 5%.

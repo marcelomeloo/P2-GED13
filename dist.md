@@ -1,5 +1,5 @@
 ## Aluno: Marcelo Melo de Oliveira 
-Link do Repositório no Github: https://github.com/marcelomeloo/P1-GED13/tree/master
+Link do Repositório no Github: https://github.com/marcelomeloo/P2-GED13
 
 
 ## Questão 1
@@ -72,7 +72,7 @@ Link do Repositório no Github: https://github.com/marcelomeloo/P1-GED13/tree/ma
 ```
 
 ### - Interpretacao
-Como em todos os testes obteve-se um valor de ```p``` maior do que 0.05, nao foi negada a hipotese nula dos testes de normalidade. Isto eh, eh possivel que a amostra siga uma distribuicao normal.
+Como em todos os testes obteve-se um valor de ```p``` maior do que 0.05, não foi negada a hipotese nula dos testes de normalidade. Isto é, é possível que a amostra siga uma distribuição normal.
 
 ### b)
 
@@ -151,7 +151,7 @@ Logo a probabilidade desejada deve ser:
 
 ![plot of chunk Probabilidade de que uma chamada demore entre 160 e 165 segundos.](figure/Probabilidade de que uma chamada demore entre 160 e 165 segundos.-1.png)
 
-Logo a probabilidade desejada sera:
+Logo a probabilidade desejada será:
 
 ```r
   pnorm(165,mean=mi,sd=sigma)-pnorm(160,mean=mi,sd=sigma)
@@ -241,7 +241,7 @@ Utilizando o comando fitdist para o primeiro conjunto de dados, temos:
 ```
 
 ![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15-1.png)
-Eh provavel que o primeiro conjunto de dados seja melhor descrito pela distribuicao gama, uma vez que eh a distribuicao que apresenta menor erro relativo para o ajuste e possui melhor alinhamento as retas dos graficos
+É provável que o primeiro conjunto de dados seja melhor descrito pela distribuição gama, uma vez que é a distribuição que apresenta menor erro relativo para o ajuste e possui melhor alinhamento às retas dos gráficos
 \newline
 \newline
 Agora, utilizando o comando fitdist para o segundo conjunto de dados, temos:
@@ -267,7 +267,7 @@ Agora, utilizando o comando fitdist para o segundo conjunto de dados, temos:
 ```
 
 ![plot of chunk unnamed-chunk-16](figure/unnamed-chunk-16-1.png)
-Eh provavel que o segundo conjunto de dados seja melhor descrito pela distribuicao exponencial, uma vez que eh a distribuicao possui melhor alinhamento as retas dos graficos
+É provavel que o segundo conjunto de dados seja melhor descrito pela distribuição exponencial, uma vez que é a distribuição possui melhor alinhamento ás retas dos gráficos
 \newline
 \newline
 **d)**
@@ -279,7 +279,7 @@ Para os dados 1:
 ```
 
 ![plot of chunk descdist dos Dados 1](figure/descdist dos Dados 1-1.png)
-De acordo com grafico, eh possivel perceber que a amostra de dados se aproxima mais de uma distribuicao gama, ja que o ponto azul se aproxima mais da reta tracejada.
+De acordo com gráfico, é possível perceber que a amostra de dados se aproxima mais de uma distribuição gama, já que o ponto azul se aproxima mais da reta tracejada.
 Agora, para os dados 2:
 
 ```r
@@ -287,7 +287,7 @@ Agora, para os dados 2:
 ```
 
 ![plot of chunk descdist dos Dados 2](figure/descdist dos Dados 2-1.png)
-De acordo com grafico, eh possivel perceber que a amostra de dados se aproxima mais de uma distribuicao exponencial, ja que o ponto azul se aproxima mais do ponto marcado como exponencial.
+De acordo com gráfico, é possível perceber que a amostra de dados se aproxima mais de uma distribuição exponencial, já que o ponto azul se aproxima mais do ponto marcado como exponencial.
 \newline
 \newline
 **e)**
@@ -333,7 +333,7 @@ Para os dados 1:
 ```
 ## [1] 561.2366
 ```
-Como o AIC do fit da gama eh o menor, percebe-se que, de fato, o ajuste para a distruibuicao gama eh o melhor dentre os demais para o primeiro conjunto de dados.
+Como o AIC do fit da gama é o menor, percebe-se que, de fato, o ajuste para a distribuição gama é o melhor dentre os demais para o primeiro conjunto de dados.
 \newline
 \newline
 Agora, para os dados 2:
@@ -377,7 +377,7 @@ Agora, para os dados 2:
 ```
 ## [1] -74.49791
 ```
-Como o AIC do fit da exponencial eh o menor, percebe-se que, de fato, o ajuste para a distruibuicao exponencial eh o melhor dentre os demais para o segundo conjunto de dados.
+Como o AIC do fit da exponencial é o menor, percebe-se que, de fato, o ajuste para a distribuição exponencial é o melhor dentre os demais para o segundo conjunto de dados.
 \newline
 \newline
 **f)**
@@ -408,7 +408,7 @@ Como o AIC do fit da exponencial eh o menor, percebe-se que, de fato, o ajuste p
 ## D = 0.033408, p-value = 0.9789
 ## alternative hypothesis: two-sided
 ```
-Como os p-valores sao 0.796 e 0.9789 para, respectivamente, os testes da gamma e da exponencial, podemos concluir que os ajustes sao adequados, uma vez que os p-valores sao superiores a 5%.
+Como os p-valores sao 0.796 e 0.9789 para, respectivamente, os testes da gama e da exponencial, podemos concluir que os ajustes são adequados, uma vez que os p-valores são superiores a 5%.
 
 ## Questão 3
 
@@ -433,14 +433,18 @@ Pelo método da máxima verossimilhança, temos:
 $$ L(\beta) = f(y_1)*f(y_2)\cdots*f(y_n) = y_1*y_2\cdots*y_n * \frac{e^\frac{-n*<Y>}{\beta}}{\beta^{2n}} $$
 $$ l(\beta) = ln(L(\beta)) = ln(y_1)+ln(y_2)+\cdots+ln(y_n)-\frac{n*<Y>}{\beta}-2nln(\beta) $$
 $$ \frac{dl(\beta)}{d\beta} = 0 \quad\therefore\quad \frac{n*<Y>}{\beta} = 2n \quad\therefore\quad \beta_{MV} = \frac{<Y>}{2} $$
+Além disso,
+$$ \frac{d^2l(\beta)}{d\beta^2} = -\frac{2n*<Y>}{\beta^3} + \frac{2n}{\beta^2} \quad\therefore\quad  
+\frac{d^2l(\beta)}{d\beta^2} = -\frac{4n\beta}{\beta^3} + \frac{2n}{\beta^2} = -2n/\beta^2 < 0 $$
 Mas,
 $$ E[Y] = \ \int_{0}^{\infty} \frac{y^2*e^\frac{-y}{\beta}}{\beta^2} \,dy \ =  
 2\beta = <Y> $$
-$$ E[Y^2] = Var[Y] + <Y>^2 =  
+$$ E[Y^2] = \sigma^2 + <Y>^2 =  
 \ \int_{0}^{\infty} \frac{y^3*e^\frac{-y}{\beta}}{\beta^2} \,dy \ = 6\beta^2  
-\quad\therefore\quad Var[Y] = 2\beta^2 = \frac{<Y>^2}{2} $$
+\quad\therefore\quad \sigma^2 = 2\beta^2 = \frac{<Y>^2}{2} $$
 Portanto, temos:
-$$ E[\beta] = <Y> \quad e \quad Var[\beta] = \frac{<Y>^2}{2} $$
+$$ E[\beta] = E[<Y>/2] = \frac{<Y>}{2} $$
+$$ Var[\beta] = E[<Y>^2/4] - (E[<Y>/2])^2 = \frac{\sigma^2/n+<Y>^2}{4} - <Y>^2/4 = \frac{<Y>^2}{8n} $$
 
 ## Questão 4
 
@@ -467,7 +471,7 @@ $$ Var[Y_1] = 10200 - 100*100 = 200 $$
 $$ \rho_{X_1,Y_1}=\frac{Cov(X_1,Y_1)}{\sigma_{X_1}*\sigma_{Y_1}} $$
 $$ \rho = 0.942809042 $$
 **i)**
-Obteve-se que a correlacao entre X2 e Y2 eh -0.942809. Com isso, observa-se que a correlacao eh igual em modulo, mas diferentes em sinal. Tal fato indica que enquanto o valor de X1 sobe eh esperado que Y1 cresca e Y2 descresca.
+Obteve-se que a correlação entre X2 e Y2 é -0.942809. Com isso, observa-se que a correlação é igual em módulo, mas diferentes em sinal. Tal fato indica que enquanto o valor de X1 sobe é esperado que Y1 cresca e Y2 descresca.
 
 ## Questão 5
 **a)**
@@ -476,6 +480,6 @@ $$ E[X] = \sum_{n=1}^{3}x_n*P(x_n) = -3/8 + 0 + 3/8 = 0 $$
 $$ E[Y] = \sum_{n=1}^{3}y_n*P(y_n) = -3/8 + 0 + 3/8 = 0 $$
 **c)**
 $$ Cov[X,Y] = E[X,Y] - E[X]E[Y] = \sum_{n=1}^{3}x_n*y_n*P_{X,Y}(x_n,y_n)$$
-$$ Cov[X,Y] = 1/8 + 1/8 = 1/4 $$
+$$ Cov[X,Y] = 1/8 - 1/8 = 0 $$
 **d)**
-Nao sao independentes, uma vez que a covariancia nao eh nula, logo o coeficiente de correlacao nao ira a zero. 
+Não são independentes, tome o seguinte contra-exemplo: $$ P_{X,Y}(-1,-1) = 1/8 $$ é diferente de $$ P_X(-1)P_Y(-1)=3/8*3/8 $$

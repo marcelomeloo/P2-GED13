@@ -24,7 +24,7 @@
 ```
 
 ### - Interpretacao
-Como em todos os testes obteve-se um valor de ```p``` maior do que 0.05, nao foi negada a hipotese nula dos testes de normalidade. Isto eh, eh possivel que a amostra siga uma distribuicao normal.
+Como em todos os testes obteve-se um valor de ```p``` maior do que 0.05, não foi negada a hipotese nula dos testes de normalidade. Isto é, é possível que a amostra siga uma distribuição normal.
 
 ### b)
 ```{r Probabilidade de que uma chamada demore entre 125 e 150 segundos.}
@@ -76,7 +76,7 @@ Logo a probabilidade desejada deve ser:
   lines(x, (1/(sigma*sqrt(2*pi)))*exp((-1/2)*((x-mi)/sigma)^2), type="h", col="grey")
 ```
 
-Logo a probabilidade desejada sera:
+Logo a probabilidade desejada será:
 ```{r}
   pnorm(165,mean=mi,sd=sigma)-pnorm(160,mean=mi,sd=sigma)
 ```
