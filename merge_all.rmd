@@ -1,0 +1,13 @@
+## Aluno: Marcelo Melo de Oliveira 
+Link do Repositório no Github: https://github.com/marcelomeloo/P1-GED13/tree/master
+
+```{R child='./q1.rmd'}
+```
+```{R child='./q2.rmd'}
+```
+```{R child='./q3.rmd'}
+```
+```{R child='./q4.rmd'}
+```
+```{R child='./q5.rmd'}
+```

@@ -1,0 +1,82 @@
+## Questão 1
+
+### a)
+### - Inicializacao
+```{r}
+  library(nortest)
+  amostra <- c(149.3355, 140.3779, 145.7254, 149.8931, 139.6168, 149.1934,  
+  129.6147, 134.7523, 167.8030, 171.7407, 157.5422, 160.2664, 155.4553,  
+  142.5989, 134.9844, 148.5172, 163.1447, 131.0138, 130.2423, 167.2239,  
+  149.4015, 145.6802, 160.3472, 121.1775, 136.7295, 162.2381, 150.7192,  
+  117.8144, 137.3630, 158.6373, 168.0833, 133.9263, 150.9102, 149.4811,  
+  167.4367, 178.0970, 138.4903, 148.6764, 181.0990, 167.3345, 147.0679,  
+  156.1410, 148.8734, 140.9484, 147.6408, 134.5726, 184.6812, 134.6648,  
+  146.8130, 167.4161)
+
+  z.amostra <- scale(amostra)
+```
+### - Testes
+```{r}
+  ks.test(z.amostra, "pnorm", 0, 1) #p-value = 0.4688
+  shapiro.test(amostra) #p-value = 0.6324
+  ad.test(amostra) #p-value = 0.3928
+  lillie.test(amostra) #p-value = 0.08619 
+```
+
+### - Interpretacao
+Como em todos os testes obteve-se um valor de ```p``` maior do que 0.05, nao foi negada a hipotese nula dos testes de normalidade. Isto eh, eh possivel que a amostra siga uma distribuicao normal.
+
+### b)
+```{r Probabilidade de que uma chamada demore entre 125 e 150 segundos.}
+  mi <- 150
+  sigma <- 15
+
+  phi <- function(x) (1/(sigma*sqrt(2*pi)))*exp((-1/2)*((x-mi)/sigma)^2)
+  plot(phi, 100, 200, lwd=5, xlab="segundos", ylab="freq")
+  x <- seq(125, 150, 0.1)
+  lines(x, (1/(sigma*sqrt(2*pi)))*exp((-1/2)*((x-mi)/sigma)^2), type="h", col="grey")
+```
+
+Logo a probabilidade desejada deve ser:
+```{r}
+  pnorm(150,mean=mi,sd=sigma)-pnorm(125,mean=mi,sd=sigma)
+```
+
+### c)
+```{r Probabilidade de que uma chamada demore menos de 125 segundos.}
+  phi <- function(x) (1/(sigma*sqrt(2*pi)))*exp((-1/2)*((x-mi)/sigma)^2)
+  plot(phi, 100, 200, lwd=5, xlab="segundos", ylab="freq")
+  x <- seq(100, 125, 0.1)
+  lines(x, (1/(sigma*sqrt(2*pi)))*exp((-1/2)*((x-mi)/sigma)^2), type="h", col="grey")
+```
+
+Logo a probabilidade desejada deve ser:
+```{r}
+  pnorm(125,mean=mi,sd=sigma)-pnorm(100,mean=mi,sd=sigma)
+```
+
+### d)
+```{r Probabilidade de que uma chamada demore entre 145 e 155 segundos.}
+  phi <- function(x) (1/(sigma*sqrt(2*pi)))*exp((-1/2)*((x-mi)/sigma)^2)
+  plot(phi, 100, 200, lwd=5, xlab="segundos", ylab="freq")
+  x <- seq(145, 155, 0.1)
+  lines(x, (1/(sigma*sqrt(2*pi)))*exp((-1/2)*((x-mi)/sigma)^2), type="h", col="grey")
+```
+
+Logo a probabilidade desejada deve ser:
+```{r}
+  pnorm(155,mean=mi,sd=sigma)-pnorm(145,mean=mi,sd=sigma)
+```
+
+### e)
+```{r Probabilidade de que uma chamada demore entre 160 e 165 segundos.}
+  phi <- function(x) (1/(sigma*sqrt(2*pi)))*exp((-1/2)*((x-mi)/sigma)^2)
+  plot(phi, 100, 200, lwd=5, xlab="segundos", ylab="freq")
+  x <- seq(160, 165, 0.1)
+  lines(x, (1/(sigma*sqrt(2*pi)))*exp((-1/2)*((x-mi)/sigma)^2), type="h", col="grey")
+```
+
+Logo a probabilidade desejada sera:
+```{r}
+  pnorm(165,mean=mi,sd=sigma)-pnorm(160,mean=mi,sd=sigma)
+```

@@ -1,0 +1,10 @@
+## Questão 5
+**a)**
+$$ E[X] = \sum_{n=1}^{3}x_n*P(x_n) = -3/8 + 0 + 3/8 = 0 $$
+**b)**
+$$ E[Y] = \sum_{n=1}^{3}y_n*P(y_n) = -3/8 + 0 + 3/8 = 0 $$
+**c)**
+$$ Cov[X,Y] = E[X,Y] - E[X]E[Y] = \sum_{n=1}^{3}x_n*y_n*P_{X,Y}(x_n,y_n)$$
+$$ Cov[X,Y] = 1/8 + 1/8 = 1/4 $$
+**d)**
+Nao sao independentes, uma vez que a covariancia nao eh nula, logo o coeficiente de correlacao nao ira a zero. 

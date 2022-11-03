@@ -1,0 +1,31 @@
+## Questão 3
+
+### a)
+Pelo método dos momentos temos:  
+$$ \mu_1 = \ \int_{0}^{\infty} \frac{y^2*e^\frac{-y}{\beta}}{\beta^2} \,dy \ = E[Y] \quad\therefore\quad  
+\mu_1 = E[Y] = 2\beta $$
+$$ \mu_1 = E[Y] = 2\beta \quad\therefore\quad \beta = \mu_1/2 $$
+Agora,
+$$ m_1 = \mu = \mu_1 \quad\therefore\quad \beta = \frac{\mu}{2} $$
+Além disso,
+$$ \mu_2 = E[Y^2] = \sigma^2 + \mu^2 =  
+\ \int_{0}^{\infty} \frac{y^3*e^\frac{-y}{\beta}}{\beta^2} \,dy \ = 6\beta^2 $$
+$$ \sigma^2 + 4\beta^2 = 6\beta^2 \quad\therefore\quad \sigma^2 = 2\beta^2 $$
+Portanto:
+$$ E[\beta] = E[\frac{<Y>}{2}] = \frac{\mu}{2} $$
+$$ Var[\beta] = E[\frac{<Y>^2}{4}] - E[\frac{<Y>}{2}]^2 =  
+\frac{\sigma^2/n+\mu^2}{4} - \mu^2/4 = \frac{\mu^2}{8n} $$
+
+### b)
+Pelo método da máxima verossimilhança, temos:
+$$ L(\beta) = f(y_1)*f(y_2)\cdots*f(y_n) = y_1*y_2\cdots*y_n * \frac{e^\frac{-n*<Y>}{\beta}}{\beta^{2n}} $$
+$$ l(\beta) = ln(L(\beta)) = ln(y_1)+ln(y_2)+\cdots+ln(y_n)-\frac{n*<Y>}{\beta}-2nln(\beta) $$
+$$ \frac{dl(\beta)}{d\beta} = 0 \quad\therefore\quad \frac{n*<Y>}{\beta} = 2n \quad\therefore\quad \beta_{MV} = \frac{<Y>}{2} $$
+Mas,
+$$ E[Y] = \ \int_{0}^{\infty} \frac{y^2*e^\frac{-y}{\beta}}{\beta^2} \,dy \ =  
+2\beta = <Y> $$
+$$ E[Y^2] = Var[Y] + <Y>^2 =  
+\ \int_{0}^{\infty} \frac{y^3*e^\frac{-y}{\beta}}{\beta^2} \,dy \ = 6\beta^2  
+\quad\therefore\quad Var[Y] = 2\beta^2 = \frac{<Y>^2}{2} $$
+Portanto, temos:
+$$ E[\beta] = <Y> \quad e \quad Var[\beta] = \frac{<Y>^2}{2} $$
